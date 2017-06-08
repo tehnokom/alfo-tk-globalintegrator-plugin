@@ -1,0 +1,1 @@
+# alfo-tk-globalintegrator-plugin
