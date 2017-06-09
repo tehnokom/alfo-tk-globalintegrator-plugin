@@ -29,6 +29,7 @@ define('TKGI_STYLES_URL', TKGI_URL . 'styles/');
 require_once (TKGI_ROOT . 'lib/db_init.php');
 require_once (TKGI_ROOT . 'lib/core.php');
 require_once (TKGI_ROOT . 'lib/common.php');
+require_once (TKGI_ROOT . 'lib/ajax-functions.php');
 
 register_activation_hook(__FILE__, 'tkgi_check_version');
 

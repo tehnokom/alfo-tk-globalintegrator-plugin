@@ -15,10 +15,14 @@ define('TKGI_STYLE_URL', plugin_dir_url(__FILE__));
 
 $subpage = '';
 $cur_subpage = tkgi_get_subpage();
-$css_deps = array();
+$css_deps = array('tkgi-common-css');
+$js_deps = array('jquery');
 
-wp_register_style('tkgi-projects-css', TKGI_STYLE_URL . 'css/projects.css', $css_deps);
-wp_register_style('tkgi-buddypress-css', TKGI_STYLE_URL . 'css/buddypress.css', $css_deps);
+wp_register_style('tkgi-projects-css', TKGI_STYLE_URL . 'css/projects.css');
+wp_register_style('tkgi-buddypress-css', TKGI_STYLE_URL . 'css/buddypress.css');
+wp_register_style('tkgi-common-css', TKGI_URL . 'css/common.css');
+
+wp_register_script('tkgi-projects-js', TKGI_STYLE_URL . 'js/page-projects.js', array('jquery'));
 
 switch ($cur_subpage) {
     case 'miakom':
@@ -28,16 +32,25 @@ switch ($cur_subpage) {
         break;
     case 'grupoj':
         $css_deps[] = 'tkgi-buddypress-css';
+        $js_deps[] = 'tkgi-buddypress-js';
     default: //projektoj
         if(!in_array('tkgi-buddypress-css', $css_deps)) {
             $css_deps[] = 'tkgi-projects-css';
         }
+
+        if(!in_array('tkgi-projects-js', $js_deps)) {
+            $js_deps[] = 'tkgi-projects-js';
+        }
+
         $subpage = 'social.php';
         break;
 }
 
 wp_register_style('tkgi-page-css', TKGI_STYLE_URL . 'css/page.css', $css_deps);
 wp_enqueue_style('tkgi-page-css');
+
+wp_register_script('tkgi-page-js', TKGI_STYLE_URL . 'js/page.js', $js_deps);
+wp_enqueue_script('tkgi-page-js');
 
 get_header();
 ?>

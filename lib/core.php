@@ -52,6 +52,9 @@ function tkgi_template_redirect()
             if(tkgi_get_subpage() === 'socio') {
                 wp_redirect( home_url('/socio/projektoj'));
                 exit;
+            } elseif(tkgi_get_subpage() === 'grupoj') {
+                wp_redirect(home_url('/grupoj'));
+                exit;
             }
 
             $wp_query->is_home = false;
@@ -59,11 +62,17 @@ function tkgi_template_redirect()
 
             add_filter('wp_title', 'tkgi_page_title');
             add_filter('aioseop_title_page', 'tkgi_page_title');
+
+            wp_register_script('tkgi-common-js', TKGI_URL . 'js/common.js', array('jquery'));
+            wp_enqueue_script('tkgi-common-js');
+            wp_localize_script('tkgi-common-js', 'tkgi_js_vars',
+                array('ajax_url' => admin_url('admin-ajax.php'),
+                    'plug_url' => TKGP_URL));
         } else {
             $wp_query->set_404();
             status_header(404);
             get_template_part(404);
-            exit();
+            exit;
         }
     }
 }

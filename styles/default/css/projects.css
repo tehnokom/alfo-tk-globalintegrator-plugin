@@ -5,15 +5,17 @@
 .tkgi-proj-unit {
     display: table;
     width: 100%;
+    margin-top: 10px;
 }
 
-.tkgi-proj-avatar, .tkgi-proj-info, .tkgi-proj-actions {
+.tkgi-proj-avatar, .tkgi-proj-info, .tkgi-proj-sp, .tkgi-proj-actions {
     display: table-cell;
     padding: 5px;
 }
 
-.tkgi-proj-avatar {
-    width: 75px;
+.tkgi-proj-avatar, .tkgi-proj-sp {
+    width: 50px;
+    padding: 0;
     vertical-align: middle;
 }
 
@@ -34,6 +36,7 @@
 
 .tkgi-proj-info > div > div {
     display: table-cell;
+    padding: 0 5px 0 10px;
 }
 
 .tkgi-proj-title h2 {
@@ -48,5 +51,11 @@
 .tkgi-filter-order select {
     border-radius: 5px;
     padding: 3px;
+    width: 150px;
     border: 1px solid #c8c8c8;
+}
+
+#tkgi-page-more {
+    width: 100%;
+    color: #777;
 }
