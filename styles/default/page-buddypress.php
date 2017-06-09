@@ -1,7 +1,7 @@
 <?php
 /** This file is part of TKGIntegrator project
  *
- *      @desc Generates Favorites page for frontend
+ *      @desc Generates a list of BuddyPress groups
  *   @package TKGIntegrator
  *   @version 0.1a
  *    @author Ravil Sarvaritdinov <ra9oaj@gmail.com>
@@ -10,3 +10,4 @@
  *   @license http://opensource.org/licenses/LGPL-3.0 LGPLv3
  *      @link https://github.com/tehnokom/alfo-tk-globalintegrator-plugin
  */
+echo "BuddyPress!";

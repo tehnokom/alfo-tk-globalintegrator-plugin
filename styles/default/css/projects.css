@@ -1,0 +1,52 @@
+.tkgi-proj {
+    margin-top: 10px;
+}
+
+.tkgi-proj-unit {
+    display: table;
+    width: 100%;
+}
+
+.tkgi-proj-avatar, .tkgi-proj-info, .tkgi-proj-actions {
+    display: table-cell;
+    padding: 5px;
+}
+
+.tkgi-proj-avatar {
+    width: 75px;
+    vertical-align: middle;
+}
+
+.tkgi-proj-actions {
+    min-width: 150px;
+    width: 150px;
+}
+
+.tkgi-proj-avatar img {
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);
+}
+
+.tkgi-proj-info > div {
+    display: table-row;
+}
+
+.tkgi-proj-info > div > div {
+    display: table-cell;
+}
+
+.tkgi-proj-title h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.tkgi-filter-box {
+    margin-top: 10px;
+}
+
+.tkgi-filter-order select {
+    border-radius: 5px;
+    padding: 3px;
+    border: 1px solid #c8c8c8;
+}

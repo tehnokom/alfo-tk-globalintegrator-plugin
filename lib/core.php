@@ -30,18 +30,53 @@ function tkgi_create_pages()
 add_action('init', 'tkgi_create_pages');
 
 
+function tkgi_page_title($_title)
+{
+    $_title = _x('Communities', 'Page title', 'tkgi');
+
+    if (function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) {
+        $_title = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($_title);
+    }
+
+    $_title = apply_filters('localization', $_title);
+
+    return $_title;
+}
+
+function tkgi_template_redirect()
+{
+    global $wp_query;
+
+    if(!empty(get_query_var('tkgi_page'))) {
+        if(tkgi_check_subpage()) {
+            if(tkgi_get_subpage() === 'socio') {
+                wp_redirect( home_url('/socio/projektoj'));
+                exit;
+            }
+
+            $wp_query->is_home = false;
+            $wp_query->is_page = true;
+
+            add_filter('wp_title', 'tkgi_page_title');
+            add_filter('aioseop_title_page', 'tkgi_page_title');
+        } else {
+            $wp_query->set_404();
+            status_header(404);
+            get_template_part(404);
+            exit();
+        }
+    }
+}
+add_filter('template_redirect', 'tkgi_template_redirect',1);
+
+
 function tkgi_set_template($template_path)
 {
     if(!empty(get_query_var('tkgi_page'))) {
-        $template_path = TKGI_STYLE_ROOT . 'default/page.php';
+        $template_path = TKGI_STYLES_ROOT . 'default/page.php';
     }
 
     return $template_path;
 }
 add_filter('template_include', 'tkgi_set_template');
 
-function tkgi_set_title($title) {
-    echo serialize($title);
-    return $title;
-}
-add_filter('document_title_parts','tkgi_set_title', 1, 1);

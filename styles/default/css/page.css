@@ -1,0 +1,40 @@
+.tkgi-nav li, .tkgi-social-nav li {
+    display: inline;
+    margin: 5px 5px 0 0;
+}
+
+.tkgi-nav li > a {
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+}
+
+.tkgi-nav li.current > a {
+    border-color: #007BAC;
+    background: #007BAC;
+    color: white;
+}
+
+.tkgi-social-nav li {
+    margin: 0 5px 0 5px;
+}
+
+.tkgi-social-nav li > a {
+    display: inline-block;
+    padding: 5px 0 5px 0;
+    color: black;
+    border-bottom: 2px solid rgba(0,0,0,0);
+}
+
+.tkgi-social-nav li.current > a {
+    border-bottom: 2px solid #dfdfdf;
+}
+
+.tkgi-block {
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}

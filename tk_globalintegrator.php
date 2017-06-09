@@ -21,13 +21,14 @@
  *      @link https://github.com/tehnokom/alfo-tk-globalintegrator-plugin
  */
 
-define(TKGI_ROOT, plugin_dir_path(__FILE__));
-define(TKGI_URL, plugin_dir_url(__FILE__));
-define(TKGI_STYLE_ROOT, TKGI_ROOT . 'styles/');
-define(TKGI_STYLE_URL, TKGI_URL . 'styles/');
+define('TKGI_ROOT', plugin_dir_path(__FILE__));
+define('TKGI_URL', plugin_dir_url(__FILE__));
+define('TKGI_STYLES_ROOT', TKGI_ROOT . 'styles/');
+define('TKGI_STYLES_URL', TKGI_URL . 'styles/');
 
 require_once (TKGI_ROOT . 'lib/db_init.php');
 require_once (TKGI_ROOT . 'lib/core.php');
+require_once (TKGI_ROOT . 'lib/common.php');
 
 register_activation_hook(__FILE__, 'tkgi_check_version');
 
@@ -43,7 +44,11 @@ function tkgi_add_admin_menu() {
         '',
         "16.1");
 }
-add_action('admin_menu', tkgi_add_admin_menu);
+add_action('admin_menu', 'tkgi_add_admin_menu');
 
-
-
+function tkgi_localize_plugin()
+{
+    load_plugin_textdomain('tkgi', false, dirname(plugin_basename(__FILE__)) . '/locales/');
+    //load_plugin_textdomain('tkgi-style', false, dirname(plugin_basename(__FILE__)) . '/styles/default/locales/');
+}
+add_action('plugins_loaded','tkgi_localize_plugin');
