@@ -36,6 +36,7 @@
                     <option value="desc"><?php echo _x('DESC', 'Default style', 'tk-style'); ?></option>
                     <option value="asc"><?php echo _x('ASC', 'Default style', 'tk-style'); ?></option>
                 </select>
+                <div class="tkgi-apply-filter tkgi_button"><a><?php echo __('Apply'); ?></a></div>
             </div>
         </div>
         <!--Filter End-->
