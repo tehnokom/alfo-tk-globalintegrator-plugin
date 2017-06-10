@@ -14,9 +14,15 @@
 <div class="tkgi-block">
     <div class="tkgi-social-nav">
         <ul>
-            <li <?php tkgi_is_current_page('projektoj'); ?> ><a href="/socio/projektoj">Общественные проекты</a></li>
-            <li <?php tkgi_is_current_page('grupoj'); ?> ><a href="/socio/grupoj">Группы</a></li>
-            <li <?php tkgi_is_current_page('org'); ?> ><a href="javascript:void(0);">Организации</a></li>
+            <li <?php tkgi_is_current_page('projektoj'); ?> >
+                <a href="/socio/projektoj"><?php echo _x('Public projects', 'Default style menu', 'tkgi-style'); ?></a>
+            </li>
+            <li <?php tkgi_is_current_page('grupoj'); ?> >
+                <a href="/socio/grupoj"><?php echo _x('Groups', 'Default style menu', 'tkgi-style'); ?></a>
+            </li>
+            <li <?php tkgi_is_current_page('org'); ?> >
+                <a href="javascript:void(0);"><?php echo _x('Organizations', 'Default style menu', 'tkgi-style'); ?></a>
+            </li>
         </ul>
     </div>
 
@@ -27,14 +33,14 @@
         <div class="tkgi-filter-box">
             <div class="tkgi-filter-order">
                 <select name="sort_by">
-                    <option value="priority"><?php echo _x('by proirity', 'Default style', 'tk-style'); ?></option>
-                    <option value="popularity"><?php echo _x('by popularity', 'Default style', 'tk-style'); ?></option>
-                    <option value="date"><?php echo _x('by date', 'Default style', 'tk-style'); ?></option>
-                    <option value="title"><?php echo _x('by title', 'Default style', 'tk-style'); ?></option>
+                    <option value="priority"><?php echo _x('by proirity', 'Projects filter', 'tkgi-style'); ?></option>
+                    <option value="popularity"><?php echo _x('by popularity', 'Projects filter', 'tkgi-style'); ?></option>
+                    <option value="date"><?php echo _x('by date', 'Projects filter', 'tkgi-style'); ?></option>
+                    <option value="title"><?php echo _x('by title', 'Projects filter', 'tkgi-style'); ?></option>
                 </select>
                 <select name="order_by">
-                    <option value="desc"><?php echo _x('DESC', 'Default style', 'tk-style'); ?></option>
-                    <option value="asc"><?php echo _x('ASC', 'Default style', 'tk-style'); ?></option>
+                    <option value="desc"><?php echo _x('DESC', 'Projects filter', 'tkgi-style'); ?></option>
+                    <option value="asc"><?php echo _x('ASC', 'Projects filter', 'tkgi-style'); ?></option>
                 </select>
                 <div class="tkgi-apply-filter tkgi_button"><a><?php echo __('Apply'); ?></a></div>
             </div>

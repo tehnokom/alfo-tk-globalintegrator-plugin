@@ -1,0 +1,85 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-10 09:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: styles/default/social.php:18
+msgctxt "Default style menu"
+msgid "Public projects"
+msgstr ""
+
+#: styles/default/social.php:21
+msgctxt "Default style menu"
+msgid "Groups"
+msgstr ""
+
+#: styles/default/social.php:24
+msgctxt "Default style menu"
+msgid "Organizations"
+msgstr ""
+
+#: styles/default/social.php:36
+msgctxt "Projects filter"
+msgid "by proirity"
+msgstr ""
+
+#: styles/default/social.php:37
+msgctxt "Projects filter"
+msgid "by popularity"
+msgstr ""
+
+#: styles/default/social.php:38
+msgctxt "Projects filter"
+msgid "by date"
+msgstr ""
+
+#: styles/default/social.php:39
+msgctxt "Projects filter"
+msgid "by title"
+msgstr ""
+
+#: styles/default/social.php:42
+msgctxt "Projects filter"
+msgid "DESC"
+msgstr ""
+
+#: styles/default/social.php:43
+msgctxt "Projects filter"
+msgid "ASC"
+msgstr ""
+
+#: styles/default/page-projects.php:128
+msgctxt "Default style"
+msgid "More"
+msgstr ""
+
+#: styles/default/page.php:61
+msgctxt "Default style menu"
+msgid "All communities"
+msgstr ""
+
+#: styles/default/page.php:64
+msgctxt "Default style menu"
+msgid "My Communities"
+msgstr ""
+
+#: styles/default/page.php:67
+msgctxt "Default style menu"
+msgid "Under consideration"
+msgstr ""
+
+#: styles/default/page.php:70
+msgctxt "Default style menu"
+msgid "Create community"
+msgstr ""

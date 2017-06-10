@@ -14,12 +14,10 @@ function tkgi_reset_filter() {
 }
 
 function tkgi_get_filter_status() {
-    var fstate = {
+    return {
         sort_by: $j('select[name="sort_by"]').val(),
         order_by: $j('select[name="order_by"]').val()
     };
-
-    return fstate;
 }
 
 function tkgi_save_filter_status() {
@@ -60,7 +58,7 @@ function tk_get_more() {
 }
 
 function tk_update_project_page(content, replace) {
-    replace = replace === undefined ? false : true;
+    replace = replace !== undefined ? true : false;
 
     $j('#tkgi-page-more').hide();
     $j('body').append('<div id="tkgi_ajax_tmp" hidden="hidden"></div>');

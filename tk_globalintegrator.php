@@ -50,6 +50,6 @@ add_action('admin_menu', 'tkgi_add_admin_menu');
 function tkgi_localize_plugin()
 {
     load_plugin_textdomain('tkgi', false, dirname(plugin_basename(__FILE__)) . '/locales/');
-    //load_plugin_textdomain('tkgi-style', false, dirname(plugin_basename(__FILE__)) . '/styles/default/locales/');
+    load_plugin_textdomain('tkgi-style', false, dirname(plugin_basename(__FILE__)) . '/styles/default/locales/');
 }
 add_action('plugins_loaded','tkgi_localize_plugin');

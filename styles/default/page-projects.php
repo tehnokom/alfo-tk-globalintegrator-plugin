@@ -41,7 +41,6 @@ if (class_exists('TK_GProject')) {
     while ($page->nextProject()) {
         $project = $page->project();
         ?>
-        <!--Project Start-->
         <li>
             <div class="tkgi-proj-unit">
                 <div class="tkgi-proj-avatar">
@@ -69,14 +68,12 @@ if (class_exists('TK_GProject')) {
                 </div>
             </div>
         </li>
-        <!--Project End-->
         <?php
         $subprojects = $project->getChildProjects();
 
         if (count($subprojects)) {
             foreach ($subprojects as $subproject) {
                 ?>
-                <!--Subproject Start-->
                 <li>
                     <div class="tkgi-proj-subunit">
                         <div class="tkgi-proj-sp">
@@ -109,7 +106,6 @@ if (class_exists('TK_GProject')) {
                         </div>
                     </div>
                 </li>
-                <!--Subproject End-->
                 <?php
             }
         }
@@ -129,7 +125,7 @@ if (class_exists('TK_GProject')) {
             <?php
         } else {
             ?>
-            <div id="tkgi-page-more" class="tkgi_button"><?php echo _x('More', 'Default style', 'tk-style'); ?></div>
+            <div id="tkgi-page-more" class="tkgi_button"><?php echo _x('More', 'Default style', 'tkgi-style'); ?></div>
             <?php
         }
     }

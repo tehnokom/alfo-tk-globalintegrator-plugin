@@ -10,4 +10,3 @@
  *   @license http://opensource.org/licenses/LGPL-3.0 LGPLv3
  *      @link https://github.com/tehnokom/alfo-tk-globalintegrator-plugin
  */
-echo "BuddyPress!";

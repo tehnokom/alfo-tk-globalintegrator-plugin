@@ -57,10 +57,18 @@ get_header();
 
 <div class="tkgi-nav">
     <ul>
-        <li <?php tkgi_is_current_page('socio'); ?> ><a href="/socio">Все сообщества</a></li>
-        <li <?php tkgi_is_current_page('miakom'); ?> ><a href="/socio/miakom">Мои сообщества</a></li>
-        <li <?php tkgi_is_current_page('konsidero'); ?> ><a href="/socio/konsidero">На рассмотрении</a></li>
-        <li <?php tkgi_is_current_page('nova'); ?> ><a href="/socio/nova">Создать сообщество</a></li>
+        <li <?php tkgi_is_current_page('socio'); ?> >
+            <a href="/socio"><?php echo _x('All communities', 'Default style menu', 'tkgi-style'); ?></a>
+        </li>
+        <li <?php tkgi_is_current_page('miakom'); ?> >
+            <a href="/socio/miakom"><?php echo _x('My Communities', 'Default style menu', 'tkgi-style'); ?></a>
+        </li>
+        <li <?php tkgi_is_current_page('konsidero'); ?> >
+            <a href="/socio/konsidero"><?php echo _x('Under consideration', 'Default style menu', 'tkgi-style'); ?></a>
+        </li>
+        <li <?php tkgi_is_current_page('nova'); ?> >
+            <a href="/socio/nova"><?php echo _x('Create community', 'Default style menu', 'tkgi-style'); ?></a>
+        </li>
     </ul>
 </div>
 
