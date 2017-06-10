@@ -62,6 +62,9 @@ function tkgi_template_redirect()
 
             add_filter('wp_title', 'tkgi_page_title');
             add_filter('aioseop_title_page', 'tkgi_page_title');
+            add_filter('aioseop_amp_description', 'tkgi_set_allseo_description');
+            add_filter('aioseop_description', 'tkgi_set_allseo_description');
+            add_filter('aioseop_canonical_url', 'tkgi_set_allseo_canonical_url');
 
             wp_register_script('tkgi-common-js', TKGI_URL . 'js/common.js', array('jquery'));
             wp_enqueue_script('tkgi-common-js');
@@ -89,3 +92,11 @@ function tkgi_set_template($template_path)
 }
 add_filter('template_include', 'tkgi_set_template');
 
+function tkgi_set_allseo_description($desk) {
+    return false;
+}
+
+function tkgi_set_allseo_canonical_url($url) {
+    //$cur_url = '/socio' . (tkgi_get_subpage() !== 'socio' ? '/' . tkgi_get_subpage() : '');
+    return false;//home_url($cur_url);
+}
