@@ -16,6 +16,7 @@ if(defined('BP_PLUGIN_DIR')) {
         : false;
 
     if($template_path) {
+        add_filter('bp_current_component', 'tkgi_bp_cur_component');
         require_once ($template_path);
     }
 } else {

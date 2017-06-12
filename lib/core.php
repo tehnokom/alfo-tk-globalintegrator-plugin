@@ -23,7 +23,7 @@ function tkgi_create_pages()
 
     add_rewrite_rule('^' . $tkgi_tag . '/([^/]+)$',
         'index.php?tkgi_page=$matches[1]', 'top');
-    add_rewrite_rule('^' . $tkgi_tag . '$', 'index.php?tkgi_page=' . $tkgi_tag, 'top');
+    add_rewrite_rule('^' . $tkgi_tag . '/?$', 'index.php?tkgi_page=' . $tkgi_tag, 'top');
 
     $wp_rewrite->flush_rules();
 }
@@ -52,10 +52,7 @@ function tkgi_template_redirect()
             if(tkgi_get_subpage() === 'socio') {
                 wp_redirect( home_url('/socio/projektoj'));
                 exit;
-            } /*elseif(tkgi_get_subpage() === 'grupoj') {
-                wp_redirect(home_url('/grupoj'));
-                exit;
-            }*/
+            }
 
             $wp_query->is_home = false;
             $wp_query->is_page = true;
@@ -81,6 +78,12 @@ function tkgi_template_redirect()
 }
 add_filter('template_redirect', 'tkgi_template_redirect',1);
 
+function tkgi_bp_cur_component($component)
+{
+    $component = !$component ? 'groups' : $component;
+
+    return $component;
+}
 
 function tkgi_set_template($template_path)
 {
