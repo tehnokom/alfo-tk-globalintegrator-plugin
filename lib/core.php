@@ -52,10 +52,10 @@ function tkgi_template_redirect()
             if(tkgi_get_subpage() === 'socio') {
                 wp_redirect( home_url('/socio/projektoj'));
                 exit;
-            } elseif(tkgi_get_subpage() === 'grupoj') {
+            } /*elseif(tkgi_get_subpage() === 'grupoj') {
                 wp_redirect(home_url('/grupoj'));
                 exit;
-            }
+            }*/
 
             $wp_query->is_home = false;
             $wp_query->is_page = true;

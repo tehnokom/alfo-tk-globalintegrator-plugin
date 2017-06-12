@@ -10,3 +10,14 @@
  *   @license http://opensource.org/licenses/LGPL-3.0 LGPLv3
  *      @link https://github.com/tehnokom/alfo-tk-globalintegrator-plugin
  */
+
+if(defined('BP_PLUGIN_DIR')) {
+    $template_path = is_dir(TEMPLATEPATH . '/buddypress/groups') ? TEMPLATEPATH . '/buddypress/groups/index.php'
+        : false;
+
+    if($template_path) {
+        require_once ($template_path);
+    }
+} else {
+
+}
