@@ -47,6 +47,8 @@ function tkgi_template_redirect()
 {
     global $wp_query;
 
+    tkgi_check_static_redirect();
+
     if(!empty(get_query_var('tkgi_page'))) {
         if(tkgi_check_subpage()) {
             if(tkgi_get_subpage() === 'socio') {
@@ -77,6 +79,17 @@ function tkgi_template_redirect()
     }
 }
 add_filter('template_redirect', 'tkgi_template_redirect',1);
+
+function tkgi_check_static_redirect()
+{
+    $matches = null;
+    $res = preg_match('/^\/(grupoj|projektoj)\/?$/' ,$_SERVER['REQUEST_URI'], $matches);
+
+    if($res) {
+        wp_redirect(home_url("/socio/$matches[1]"));
+        exit();
+    }
+}
 
 function tkgi_bp_cur_component($component)
 {
