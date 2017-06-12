@@ -1,0 +1,63 @@
+.tkgi-nav li, .tkgi-social-nav li {
+    display: inline;
+    margin: 5px 5px 0 0;
+}
+
+.tkgi-nav li > a {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    color: black;
+    height: 30px;
+    line-height: 26px;
+}
+
+.tkgi-nav li.current > a {
+    border-color: #007BAC;
+    background: #007BAC;
+    color: white;
+}
+
+.tkgi-social-nav li {
+    margin: 0 5px 0 5px;
+}
+
+.tkgi-social-nav li > a {
+    display: inline-block;
+    padding: 5px 0 5px 0;
+    color: black;
+    border-bottom: 2px solid rgba(0,0,0,0);
+}
+
+.tkgi-social-nav li.current > a {
+    border-bottom: 2px solid #dfdfdf;
+}
+
+.tkgi-nav span.tkgi-large {
+    padding: 0 2px !important;
+}
+
+.tkgi-nav span {
+    display: inline-block !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    padding: 0 3px !important;
+    margin-top: -1px !important;
+    font-size: 9px !important;
+    line-height: 18px !important;
+    border-radius: 10px !important;
+    border: 1px solid #ccc;
+    color: #6c6c6c;
+    vertical-align: middle;
+    text-align: center;
+    background: #eee;
+}
+
+.tkgi-block {
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
