@@ -35,14 +35,8 @@ function tkgi_is_current_page($page)
 {
     $cur_page = tkgi_get_subpage();
 
-    if ($cur_page === $page ||
-        ($page === 'socio' && preg_match('/^(projektoj|grupoj)$/', $cur_page))
-    ) {
-        echo 'class="current selected"';
-        return true;
-    }
-
-    return false;
+    return ($cur_page === $page ||
+        ($page === 'socio' && preg_match('/^(projektoj|grupoj)$/', $cur_page)));
 }
 
 function tkgi_ifelse(bool $expression, $then, $else = null, bool $print_this = false)
