@@ -65,7 +65,7 @@ function tkgi_ifelse(bool $expression, $then, $else = null, bool $print_this = f
 function tkgi_total_groups()
 {
     $bp_groups = defined('BP_PLUGIN_DIR') ? bp_get_total_group_count() : 0;
-    $projects = defined('TKGP_ROOT') ? TK_GPage::getTotalProjectCount() : 0;
+    $projects = defined('TKGP_ROOT') ? tkgp_get_total_project_count() : 0;
 
     return $bp_groups + $projects;
 }

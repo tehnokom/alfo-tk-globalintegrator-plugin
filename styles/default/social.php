@@ -33,7 +33,7 @@
         <div class="tkgi-filter-box">
             <div class="tkgi-filter-order">
                 <select name="sort_by">
-                    <option value="priority"><?php echo _x('by proirity', 'Projects filter', 'tkgi-style'); ?></option>
+                    <option value="priority"><?php echo _x('by globality', 'Projects filter', 'tkgi-style'); ?></option>
                     <option value="popularity"><?php echo _x('by popularity', 'Projects filter', 'tkgi-style'); ?></option>
                     <option value="date"><?php echo _x('by date', 'Projects filter', 'tkgi-style'); ?></option>
                     <option value="title"><?php echo _x('by title', 'Projects filter', 'tkgi-style'); ?></option>

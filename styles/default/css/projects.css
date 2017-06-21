@@ -32,8 +32,8 @@
 }
 
 .tkgi-proj-actions {
-    min-width: 150px;
-    width: 150px;
+    min-width: 0px;
+    width: 0px;
 }
 
 .tkgi-proj-avatar img {
