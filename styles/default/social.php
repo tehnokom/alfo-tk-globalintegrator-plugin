@@ -14,13 +14,13 @@
 <div class="tkgi-block">
     <div class="tkgi-social-nav">
         <ul>
-            <li <?php tkgi_is_current_page('projektoj'); ?> >
+            <li <?php tkgi_ifelse(tkgi_is_current_page('projektoj'), 'class="current selected"', '', true); ?> >
                 <a href="/socio/projektoj"><?php echo _x('Public projects', 'Default style menu', 'tkgi-style'); ?></a>
             </li>
-            <li <?php tkgi_is_current_page('grupoj'); ?> >
+            <li <?php tkgi_ifelse(tkgi_is_current_page('grupoj'), 'class="current selected"', '', true); ?> >
                 <a href="/socio/grupoj"><?php echo _x('Groups', 'Default style menu', 'tkgi-style'); ?></a>
             </li>
-            <li <?php tkgi_is_current_page('org'); ?> >
+            <li <?php tkgi_ifelse(tkgi_is_current_page('org'), 'class="current selected"', '', true); ?> >
                 <a href="javascript:void(0);"><?php echo _x('Organizations', 'Default style menu', 'tkgi-style'); ?></a>
             </li>
         </ul>
@@ -33,7 +33,7 @@
         <div class="tkgi-filter-box">
             <div class="tkgi-filter-order">
                 <select name="sort_by">
-                    <option value="priority"><?php echo _x('by proirity', 'Projects filter', 'tkgi-style'); ?></option>
+                    <option value="priority"><?php echo _x('by globality', 'Projects filter', 'tkgi-style'); ?></option>
                     <option value="popularity"><?php echo _x('by popularity', 'Projects filter', 'tkgi-style'); ?></option>
                     <option value="date"><?php echo _x('by date', 'Projects filter', 'tkgi-style'); ?></option>
                     <option value="title"><?php echo _x('by title', 'Projects filter', 'tkgi-style'); ?></option>

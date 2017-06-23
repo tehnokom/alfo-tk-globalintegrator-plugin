@@ -56,7 +56,7 @@ get_header();
 
     <div class="tkgi-nav">
         <ul>
-            <li <?php tkgi_is_current_page('socio'); ?> >
+            <li <?php tkgi_ifelse(tkgi_is_current_page('socio'), 'class="current selected"', '', true); ?> >
                 <a href="/socio"><?php echo _x('All communities', 'Default style menu', 'tkgi-style'); ?>
                     <span <?php tkgi_ifelse(tkgi_total_groups() > 99, 'class="tkgi-large"', '', true) ?> >
                         <?php echo tkgi_total_groups(); ?>
@@ -64,13 +64,13 @@ get_header();
                 </a>
             </li>
             <?php if (is_user_logged_in()) { ?>
-                <li <?php tkgi_is_current_page('miakom'); ?> >
+                <li <?php tkgi_ifelse(tkgi_is_current_page('miakom'), 'class="current selected"', '', true); ?> >
                     <a href="/socio/miakom"><?php echo _x('My Communities', 'Default style menu', 'tkgi-style'); ?></a>
                 </li>
-                <li <?php tkgi_is_current_page('konsidero'); ?> >
+                <li <?php tkgi_ifelse(tkgi_is_current_page('konsidero'), 'class="current selected"', '', true); ?> >
                     <a href="/socio/konsidero"><?php echo _x('Under consideration', 'Default style menu', 'tkgi-style'); ?></a>
                 </li>
-                <li <?php tkgi_is_current_page('nova'); ?> >
+                <li <?php tkgi_ifelse(tkgi_is_current_page('nova'), 'class="current selected"', '', true); ?> >
                     <a href="/socio/nova"><?php echo _x('Create community', 'Default style menu', 'tkgi-style'); ?></a>
                 </li>
             <?php } ?>

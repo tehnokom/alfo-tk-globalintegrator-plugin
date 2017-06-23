@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TKGI Default Style\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-10 09:45+0000\n"
-"PO-Revision-Date: 2017-06-10 09:50+0000\n"
+"POT-Creation-Date: 2017-06-21 14:12+0000\n"
+"PO-Revision-Date: 2017-06-21 14:12+0000\n"
 "Last-Translator: Равиль <ra9oaj@mail.ru>\n"
 "Language-Team: Russian\n"
 "Language: ru-RU\n"
@@ -13,6 +13,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
+
+#: styles/default/social.php:36
+msgctxt "Projects filter"
+msgid "by globality"
+msgstr "По глобальности"
 
 #: styles/default/social.php:18
 msgctxt "Default style menu"
@@ -28,11 +33,6 @@ msgstr "Группы"
 msgctxt "Default style menu"
 msgid "Organizations"
 msgstr "Организации"
-
-#: styles/default/social.php:36
-msgctxt "Projects filter"
-msgid "by proirity"
-msgstr "По приоритету"
 
 #: styles/default/social.php:37
 msgctxt "Projects filter"
@@ -64,22 +64,22 @@ msgctxt "Default style"
 msgid "More"
 msgstr "Ещё"
 
-#: styles/default/page.php:61
+#: styles/default/page.php:60
 msgctxt "Default style menu"
 msgid "All communities"
 msgstr "Все сообщества"
 
-#: styles/default/page.php:64
+#: styles/default/page.php:68
 msgctxt "Default style menu"
 msgid "My Communities"
 msgstr "Мои сообщества"
 
-#: styles/default/page.php:67
+#: styles/default/page.php:71
 msgctxt "Default style menu"
 msgid "Under consideration"
 msgstr "На утверждении"
 
-#: styles/default/page.php:70
+#: styles/default/page.php:74
 msgctxt "Default style menu"
 msgid "Create community"
 msgstr "Создать сообщество"
